@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row mt-5">
+        <h3 class="mb-3 text-center">List of all employees</h3>
+        <hr>
+            @for (employee of employees; track employee.id) 
+            {
+            <div class="col-md-3 mb-2">
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            {{employee.names}}
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Email : {{employee.email}}</li>
+                                <li class="list-group-item">Address:{{employee.address}}</li>
+                                <li class="list-group-item">Status : {{employee.status}}</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+    </div>
+</div>
